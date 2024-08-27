@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(1, 1, 27);
+    background-color:rgb(4, 16, 27);
 }
 
 nav{
@@ -55,7 +55,7 @@ nav{
 }
 
 .hamburger-menu.active .bar-mid{
-    opacity: 0;
+    display: none;
 }
 
 .hamburger-menu.active .bar-bottom{
@@ -64,3 +64,20 @@ nav{
     transform: translate(-50%,-50%) rotate(-225deg);
     top: 50%;
 }
+
+
+.menu{
+    position: fixed;
+    top: 0;
+    background-color:rgb(4, 38, 70);
+    right: -75%;
+    height: 100vh;
+    width: 75%;
+    transition: right .5s;
+}
+
+.menu.active{
+    right: 0;
+}
+
+
