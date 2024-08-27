@@ -22,12 +22,12 @@ nav{
     width: 100%;
     padding: 0.5rem;
     background-color: rgb(20, 30, 40); /* Slightly lighter dark blue */
-
     display: flex;
     justify-content: flex-end;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* optional */
     transition: transform 0.3s ease; /* smooth transition for hiding/showing */
+    z-index: 5;
 }
 
 nav h1{
@@ -119,7 +119,7 @@ a{
         top: 0;
         background-color:rgb(4, 24, 43);
         right: -75%;
-        height: 100vh;
+        height: 110vh;
         width: 75%;
         transition: right .5s;
     }
@@ -160,6 +160,7 @@ a{
 h1{
     color: white;
 }
+
 
 section{
     height: 100vh;
