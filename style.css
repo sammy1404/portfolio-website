@@ -8,6 +8,7 @@ html {
 :root {
     --background-color: rgb(4, 16, 27); 
     --nav-color: rgb(20, 30, 40);
+    --heading-color:rgb(139, 133, 133);
     --text-color: #ffffff;
     --menu-color: rgb(4, 24, 43);
 }
@@ -15,8 +16,13 @@ html {
 .light-theme {
     --background-color: #ffffff;
     --nav-color: #c1bdbd;
+    --heading-color:rgb(139, 133, 133);
     --text-color: #000000;
     --menu-color: rgb(188, 216, 242);
+}
+
+.custom-theme {
+
 }
   
 *{
@@ -255,20 +261,28 @@ section{
 
 .color-pickers{
     display: flex;
+    margin-left: 40px;
 }
 
-/*
-<div class="window-preview1">
-<div class="preview-background">
-    <div class="preview-navbar">
-        <div class="preview-nav">
-            <div class="preview-headings">
-                <div class="preview-text">
+.color-pickers h2{
+    font-size: 30px;
+    transform: translateY(20px);
+}
+.color-pickers .color-picker-container{
+    display: flex;
+    flex-direction: column;
+}
 
-                */
+.color-pickers input{
+    transform: translate(-100px,50px);
+    margin: 20px;
+}
 
-
-/* style.css */
+.color-pickers label{
+    transform: translate(-150px,95px);
+    font-weight: 500;
+    color: var(--text-color);
+}
 
 /* Container for the window preview */
 .window-preview1 {

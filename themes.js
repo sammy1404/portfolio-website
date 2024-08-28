@@ -88,3 +88,29 @@ if (darkTheme) {
     moon.classList.add('hide-moon');
 }
 
+/*
+// Function to update CSS variables with color values
+function updateCustomTheme() {
+    // Get color values from inputs
+    const color1 = document.getElementById('color1').value;
+    const color2 = document.getElementById('color2').value;
+    const color3 = document.getElementById('color3').value;
+    const color4 = document.getElementById('color4').value;
+    const color5 = document.getElementById('color5').value;
+    
+    // Apply colors to CSS variables
+    document.documentElement.style.setProperty('--background-color', color1);
+    document.documentElement.style.setProperty('--nav-color', color2);
+    document.documentElement.style.setProperty('--heading-color', color3);
+    document.documentElement.style.setProperty('--text-color', color4);
+    document.documentElement.style.setProperty('--menu-color', color5);
+}
+
+// Event listener for the button click
+document.getElementById('applyThemeBtn').addEventListener('click', updateCustomTheme);
+*/
+
+document.getElementById('color1').addEventListener('input', function() {
+    const selectedColor = this.value;
+    document.querySelector('.preview-background').style.color = selectedColor;
+});
