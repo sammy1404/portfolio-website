@@ -28,6 +28,7 @@ themeButton.addEventListener('click',()=>{
         sunM.classList.remove('show-sun');
         moonM.classList.add('show-moon');
         moonM.classList.remove('hide-moon');
+        document.body.classList.remove('light-theme');
     } else {
         sun.classList.add('show-sun');
         sun.classList.remove('hide-sun');
@@ -39,6 +40,7 @@ themeButton.addEventListener('click',()=>{
         sunM.classList.remove('hide-sun');
         moonM.classList.add('hide-moon');
         moonM.classList.remove('show-moon');
+        document.body.classList.add('light-theme');
     }
 });
 
@@ -62,6 +64,7 @@ mobileThemeButton.addEventListener('click',()=>{
         sun.classList.remove('show-sun');
         moon.classList.add('show-moon');
         moon.classList.remove('hide-moon');
+        document.body.classList.remove('light-theme');
     } else {
         sunM.classList.add('show-sun');
         sunM.classList.remove('hide-sun');
@@ -73,6 +76,7 @@ mobileThemeButton.addEventListener('click',()=>{
         sun.classList.remove('hide-sun');
         moon.classList.add('hide-moon');
         moon.classList.remove('show-moon');
+        document.body.classList.add('light-theme');
     }
 });
 
@@ -83,3 +87,4 @@ if (darkTheme) {
     sun.classList.add('show-sun');
     moon.classList.add('hide-moon');
 }
+
