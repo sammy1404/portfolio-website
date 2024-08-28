@@ -48,6 +48,7 @@ a{
     width: 50px; /* Width of the icons */
     height: 50px; /* Height of the icons */
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .moon, .sun {
