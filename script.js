@@ -29,3 +29,43 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
     });
 });
+
+
+
+darkTheme = true
+
+
+const sun = document.querySelector('.sun');
+const moon = document.querySelector('.moon');
+
+
+
+
+const themeButton = document.querySelector('.theme');
+
+
+themeButton.addEventListener('click',()=>{
+    darkTheme = !darkTheme;
+    console.log(darkTheme)
+
+
+    if (darkTheme) {
+        sun.classList.add('hide-sun');
+        sun.classList.remove('show-sun');
+        moon.classList.add('show-moon');
+        moon.classList.remove('hide-moon');
+    } else {
+        sun.classList.add('show-sun');
+        sun.classList.remove('hide-sun');
+        moon.classList.add('hide-moon');
+        moon.classList.remove('show-moon');
+    }
+});
+
+if (darkTheme) {
+    sun.classList.add('hide-sun');
+    moon.classList.add('show-moon');
+} else {
+    sun.classList.add('show-sun');
+    moon.classList.add('hide-moon');
+}

@@ -43,6 +43,68 @@ a{
     color: white;
 }
 
+.theme {
+    position: relative;
+    width: 50px; /* Width of the icons */
+    height: 50px; /* Height of the icons */
+    margin-left: 20px;
+}
+
+.moon, .sun {
+    position: absolute;
+    top: 25;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.moon {
+    z-index: 2; /* Place the moon icon on top */
+    opacity: 1; /* You can control visibility with opacity or display */
+    transition: opacity 0.3s ease-in-out; /* Optional: for smooth transitions */
+}
+
+.sun {
+    z-index: 1; /* Place the sun icon behind */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Optional: for smooth transitions */
+}
+
+
+/* Base styles */
+.theme .sun, .theme .moon {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Hide Sun Animation */
+.hide-sun {
+    opacity: 0;
+    transform: scale(0.8) rotate(-20deg);
+    pointer-events: none; /* Prevent interaction */
+}
+
+/* Show Sun Animation */
+.show-sun {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    pointer-events: auto; /* Enable interaction */
+}
+
+/* Hide Moon Animation */
+.hide-moon {
+    opacity: 0;
+    transform: scale(0.8) rotate(20deg);
+    pointer-events: none; /* Prevent interaction */
+}
+
+/* Show Moon Animation */
+.show-moon {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    pointer-events: auto; /* Enable interaction */
+}
+
+
 @media (min-width: 980px){
     .desktop-menu{
         display: flex;
