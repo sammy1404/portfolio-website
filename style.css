@@ -22,8 +22,30 @@ html {
 }
 
 .custom-theme {
-
+    --background-color: var(--custom-color1, #ffffff); /* Default to white */
+    --nav-color: var(--custom-color2, #c1bdbd); /* Default to light gray */
+    --heading-color: var(--custom-color3, rgb(139, 133, 133)); /* Default to dark gray */
+    --text-color: var(--custom-color4, #000000); /* Default to black */
+    --menu-color: var(--custom-color5, rgb(188, 216, 242)); /* Default to light blue */
 }
+
+body.custom-theme {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.custom-theme nav {
+    background-color: var(--nav-color);
+}
+
+.custom-theme h1, .custom-theme h2, .custom-theme h3, .custom-theme h4, .custom-theme h5, .custom-theme h6 {
+    color: var(--heading-color);
+}
+
+.custom-theme .menu {
+    background-color: var(--menu-color);
+}
+
   
 *{
     margin: 0;

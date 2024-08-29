@@ -1,4 +1,5 @@
 darkTheme = true
+customTheme = false
 
 
 const sun = document.querySelector('.sun');
@@ -14,10 +15,11 @@ const moonM = document.querySelector('.menu .moon');
 
 themeButton.addEventListener('click',()=>{
     darkTheme = !darkTheme;
+    customTheme = false
     console.log(darkTheme)
 
 
-    if (darkTheme) {
+    if (darkTheme&&!customTheme) {
         sun.classList.add('hide-sun');
         sun.classList.remove('show-sun');
         moon.classList.add('show-moon');
@@ -29,6 +31,7 @@ themeButton.addEventListener('click',()=>{
         moonM.classList.add('show-moon');
         moonM.classList.remove('hide-moon');
         document.body.classList.remove('light-theme');
+        document.body.classList.remove('custom-theme');
     } else {
         sun.classList.add('show-sun');
         sun.classList.remove('hide-sun');
@@ -41,6 +44,7 @@ themeButton.addEventListener('click',()=>{
         moonM.classList.add('hide-moon');
         moonM.classList.remove('show-moon');
         document.body.classList.add('light-theme');
+        document.body.classList.remove('custom-theme');
     }
 });
 
@@ -111,6 +115,36 @@ document.getElementById('applyThemeBtn').addEventListener('click', updateCustomT
 */
 
 document.getElementById('color1').addEventListener('input', function() {
-    const selectedColor = this.value;
-    document.querySelector('.preview-background').style.color = selectedColor;
+    document.body.classList.add('custom-theme');
+    document.body.classList.remove('light-theme');
+    document.documentElement.style.setProperty('--custom-color1', this.value);
+    customTheme=true
+});
+
+document.getElementById('color2').addEventListener('input', function() {
+    document.body.classList.add('custom-theme');
+    document.body.classList.remove('light-theme');
+    document.documentElement.style.setProperty('--custom-color2', this.value);
+    customTheme=true
+});
+
+document.getElementById('color3').addEventListener('input', function() {
+    document.body.classList.add('custom-theme');
+    document.body.classList.remove('light-theme');
+    document.documentElement.style.setProperty('--custom-color3', this.value);
+    customTheme=true
+});
+
+document.getElementById('color4').addEventListener('input', function() {
+    document.body.classList.add('custom-theme');
+    document.body.classList.remove('light-theme');
+    document.documentElement.style.setProperty('--custom-color4', this.value);
+    customTheme=true
+});
+
+document.getElementById('color5').addEventListener('input', function() {
+    document.body.classList.add('custom-theme');
+    document.body.classList.remove('light-theme');
+    document.documentElement.style.setProperty('--custom-color5', this.value);
+    customTheme=true
 });
