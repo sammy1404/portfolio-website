@@ -69,6 +69,7 @@ mobileThemeButton.addEventListener('click',()=>{
         moon.classList.add('show-moon');
         moon.classList.remove('hide-moon');
         document.body.classList.remove('light-theme');
+        document.body.classList.remove('custom-theme');
     } else {
         sunM.classList.add('show-sun');
         sunM.classList.remove('hide-sun');
@@ -81,6 +82,7 @@ mobileThemeButton.addEventListener('click',()=>{
         moon.classList.add('hide-moon');
         moon.classList.remove('show-moon');
         document.body.classList.add('light-theme');
+        document.body.classList.remove('custom-theme');
     }
 });
 

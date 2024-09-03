@@ -15,7 +15,7 @@ html {
 
 .light-theme {
     --background-color: rgb(165, 195, 226); /* Light background */
-    --nav-color: rgba(121, 150, 180, 0.609); /* Light background */
+    --nav-color: rgb(121, 150, 180); /* Light background */
     --heading-color: rgb(50, 50, 50); /* Darker text for headings */
     --text-color: #000000c1; /* Black text */
     --accent-color: rgb(82, 140, 199); /* A lighter blue accent */
@@ -353,7 +353,7 @@ button svg{
     .container{
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 5px;
     }
     .previews{
         display: flex;
