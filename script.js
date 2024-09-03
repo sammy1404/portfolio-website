@@ -30,3 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.getElementById('toggle-color-pickers').addEventListener('click', function() {
+    const colorPickers = document.querySelector('.color-pickers');
+    colorPickers.classList.toggle('visible');
+});
+
+
