@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -76,27 +76,41 @@
     <section id="resume">
         <h2>RESUME</h2>
     </section>
+    
+    <div class="color-pickers">
 
-    <section class="color-pickers">
-        <h2>Choose Your Themes:</h2>
-        <br>
+        <div class="container">
+        
         <div class="color-picker-container">
-            <label for="color1">Color 1:</label>
-            <input type="color" id="color1" name="color1" value="#ff0000">
-            
-            <label for="color2">Color 2:</label>
-            <input type="color" id="color2" name="color2" value="#00ff00">
-            
-            <label for="color3">Color 3:</label>
-            <input type="color" id="color3" name="color3" value="#0000ff">
-            
-            <label for="color4">Color 4:</label>
-            <input type="color" id="color4" name="color4" value="#ffff00">
-            
-            <label for="color5">Color 5:</label>
-            <input type="color" id="color5" name="color5" value="#ff00ff">
-            
+
+            <div class="wrap-colorpicker">
+                <label for="color1">Background:</label>
+                <input type="color" id="color1" name="color1" value="#04101B">
+            </div>  
+
+            <div class="wrap-colorpicker">
+            <label for="color2">Navigation:</label>
+            <input type="color" id="color2" name="color2" value="#141E28">
+            </div>
+
+            <div class="wrap-colorpicker">
+            <label for="color3">Headings:</label>
+            <input type="color" id="color3" name="color3" value="#8B8585">
+            </div>
+
+            <div class="wrap-colorpicker">
+            <label for="color4"> Text:</label>
+            <input type="color" id="color4" name="color4" value="#ffffff">
+            </div>
+
+            <div class="wrap-colorpicker">
+            <label for="color5">Accent:</label>
+            <input type="color" id="color5" name="color5" value="#04182B">
+            </div>
+
         </div>
+
+        <div class="previews">
         <div class="window-preview1">
             <div class="preview-background">
                 <div class="preview-navbar">
@@ -126,8 +140,10 @@
                 </div>
             </div>
         </div>
-        
-    </section>
+    </div>
+    </div>
+    </div>
+
 
     <script src="themes.js"></script>
     <script src="script.js"></script>
