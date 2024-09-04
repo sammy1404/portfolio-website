@@ -8,7 +8,7 @@ html {
 :root {
     --background-color: rgb(4, 16, 27); 
     --nav-color: rgb(20, 30, 40);
-    --heading-color:rgb(225, 251, 255);
+    --heading-color:rgba(53, 97, 138, 0.668);
     --text-color: #ffffff;
     --accent-color: rgb(4, 24, 43);
 }
@@ -69,7 +69,7 @@ nav{
 svg text{
     fill: var(--background-color);
     font-weight: 600;
-    stroke: var(--background-color);
+    stroke: var(--);
 }
 
 a{

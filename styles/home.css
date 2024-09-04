@@ -17,11 +17,10 @@
     justify-content: center;
     align-items: left;
     height: 100vh;
-    width: 70vw;
 }
 
 #hi{
-    font-size: 6.2vw;
+    font-size: max(6.2vw,5vh);
     font-weight: bold;
     color: rgba(255, 255, 255, 0.845);
     text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
@@ -61,7 +60,7 @@
   
 
 #hi2::after{
-    width: 0.125em;
+    width: 0.1em;
     background-color: var(--text-color);
     animation: typeWriter 2s steps(17) forwards, blinkCursor 1s step-end 2s infinite;
 
@@ -81,14 +80,17 @@
 
 #bio{
     margin-top: 30px;
-    width: max(40vw,30vh);
-    font-size: max(1.5vw,1.5vh);
-    color: var(--text-color);
 
-}
-
-#welcome{
-    margin-top: 60px;
+    width: 430px;
+    font-size: 15px;
+    font-weight:lighter;
     color: var(--heading-color);
-    font-size: max(2vw,2.5vh);
+
 }
+
+@media(max-width:650px){
+    #bio{
+        width: 280px;
+    }
+}
+
