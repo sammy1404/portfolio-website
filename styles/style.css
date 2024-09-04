@@ -157,7 +157,7 @@ a{
 @media (max-width: 980px){
 
     .hamburger-menu{
-        padding: 2.2rem;
+        padding: 35px;
         height: 50px;
         width: 50px;
         position: relative;
