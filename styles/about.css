@@ -1,0 +1,72 @@
+@import url("style.css");
+
+#about{
+    margin-left: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.aboutSection{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+h1{
+    color: var(--heading-color);
+    font-size: 7vw;
+    position: relative; /* Establish a positioning context */
+    display: inline-block;
+    line-height: 5; /* Set line height to control vertical alignment */
+}
+
+
+
+h1::after {
+    content: ''; /* Required for pseudo-elements */
+    display: inline-block; /* Make the line inline */
+    width: 45vw; /* Set the width of the line */
+    height: 1px; /* Set the thickness of the line */
+    background: var(--heading-color); /* Set the color of the line */
+    margin-left: 25px; /* Space between heading and line */
+    vertical-align: middle; /* Vertically center the line */
+    position: relative; /* Position relative to the heading */
+    top: 0; /* Adjust this value to align with the 't' */
+}
+
+
+
+.aboutFlex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 10vw;
+    justify-content: space-between;
+}
+
+
+
+#about p{
+    color: white;
+    width: 45vw;
+    font-size: px;
+}
+
+#about img{
+    height: 330px;
+}
+
+@media(max-width:980px){
+    #about p{
+        width: 100vw;
+    }
+    .aboutFlex{
+        margin-right: 30px;
+        gap: 30px;
+        justify-content: center;
+    }
+
+}
+
