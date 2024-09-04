@@ -1,3 +1,99 @@
+:root {
+    --typewriterSpeed: 6s;
+    --typewriterCharacters: 24;
+  }
+
+  :root {
+    --background-color: rgb(4, 16, 27); 
+    --nav-color: rgb(20, 30, 40);
+    --heading-color:rgb(139, 133, 133);
+    --text-color: #ffffff;
+    --accent-color: rgb(4, 24, 43);
+}
+
+.light-theme {
+    --background-color: rgb(165, 195, 226); /* Light background */
+    --nav-color: rgb(121, 150, 180); /* Light background */
+    --heading-color: rgb(50, 50, 50); /* Darker text for headings */
+    --text-color: #000000c1; /* Black text */
+    --accent-color: rgb(82, 140, 199); /* A lighter blue accent */
+    
+}
+
+.custom-theme {
+    --background-color: var(--custom-color1, #ffffff); /* Default to white */
+    --nav-color: var(--custom-color2, #c1bdbd); /* Default to light gray */
+    --heading-color: var(--custom-color3, rgb(139, 133, 133)); /* Default to dark gray */
+    --text-color: var(--custom-color4, #000000); /* Default to black */
+    --accent-color: var(--custom-color5, rgb(188, 216, 242)); /* Default to light blue */
+}
+
+
+
+
+
 #home{
+    padding-left: 15vw;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 100vh;
+}
+
+#hi{
+    font-size: 6.2vw;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.681);
+}
+
+
+#hi2{
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.482);
+    position: relative;
+    display: inline-block;
+}
+
+#hi2 {
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    width: max-content;
+    display: inline-block;
+}
+  
+#hi2::before,
+#hi2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+#hi2::before{
+    background: var(--background-color);
+    animation: typeWriter 2s steps(17) forwards;
+}
+  
+
+#hi2::after{
+    width: 0.125em;
+    background-color: var(--text-color);
+    animation: typeWriter 2s steps(17) forwards, blinkCursor 1s step-end 2s infinite;
+
+}
+
+@keyframes typeWriter{
+    to{
+        left: 100%;
+    }
+}
+@keyframes blinkCursor {
+    50% {
+        background-color: transparent; /* Makes the cursor disappear halfway through the blink cycle */
+    }
 }
