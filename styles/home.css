@@ -3,54 +3,34 @@
     --typewriterCharacters: 24;
   }
 
-  :root {
-    --background-color: rgb(4, 16, 27); 
-    --nav-color: rgb(20, 30, 40);
-    --heading-color:rgb(139, 133, 133);
-    --text-color: #ffffff;
-    --accent-color: rgb(4, 24, 43);
-}
+  @import url("style.css");
 
-.light-theme {
-    --background-color: rgb(165, 195, 226); /* Light background */
-    --nav-color: rgb(121, 150, 180); /* Light background */
-    --heading-color: rgb(50, 50, 50); /* Darker text for headings */
-    --text-color: #000000c1; /* Black text */
-    --accent-color: rgb(82, 140, 199); /* A lighter blue accent */
-    
-}
-
-.custom-theme {
-    --background-color: var(--custom-color1, #ffffff); /* Default to white */
-    --nav-color: var(--custom-color2, #c1bdbd); /* Default to light gray */
-    --heading-color: var(--custom-color3, rgb(139, 133, 133)); /* Default to dark gray */
-    --text-color: var(--custom-color4, #000000); /* Default to black */
-    --accent-color: var(--custom-color5, rgb(188, 216, 242)); /* Default to light blue */
-}
 
 
 
 
 
 #home{
-    padding-left: 15vw;
+    margin-left: 15vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
     height: 100vh;
+    width: 70vw;
 }
 
 #hi{
     font-size: 6.2vw;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.681);
+    color: rgba(255, 255, 255, 0.845);
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 
 #hi2{
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.482);
+    color: rgba(255, 255, 255, 0.674);
     position: relative;
     display: inline-block;
 }
@@ -96,4 +76,19 @@
     50% {
         background-color: transparent; /* Makes the cursor disappear halfway through the blink cycle */
     }
+}
+
+
+#bio{
+    margin-top: 30px;
+    width: max(40vw,30vh);
+    font-size: max(1.5vw,1.5vh);
+    color: var(--text-color);
+
+}
+
+#welcome{
+    margin-top: 60px;
+    color: var(--heading-color);
+    font-size: max(2vw,2.5vh);
 }
