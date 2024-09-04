@@ -210,7 +210,7 @@ a{
         position: fixed;
         top: 0;
         background-color: var(--accent-color);
-
+        transform: translateY(-20px);
         right: -75%;
         height: 110vh;
         width: 75%;
