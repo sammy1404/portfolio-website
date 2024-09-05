@@ -58,6 +58,7 @@
     }
     .flex-container{
         margin: 6vw;
+        gap: 15px;
     }
     .card p{
         font-size: 15px;
