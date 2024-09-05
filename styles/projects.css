@@ -41,10 +41,8 @@
     box-sizing: border-box; /* Ensure padding and borders don't affect size */
     padding: 10px; /* Optional padding */
     background-color: var(--nav-color);
-    margin: 10px;
+    margin-inline: 10px;
     border-radius: 10px;
-
-    padding-bottom: 20px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
   }
@@ -94,7 +92,7 @@
     font-size: 30px;
     display: flex;
     justify-content: center;
-    align-content: center;
+    justify-self: center;
     transform: translateY(-30px);
   }
 
@@ -121,4 +119,25 @@
     transform: translateY(-5px); /* Moves up on hover */
     cursor: pointer;
     fill: var(--text-color); /* Ensure this targets the right SVG paths */
+}
+.center{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#archive{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    padding: 10px;
+    margin: 40px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#archive:hover{
+    transform: translateY(-5px);
+    background-color: var(--nav-color);
 }
