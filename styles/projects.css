@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+#projects{
+    height: fit-content;
+}
+
 #projects h1 {
     color: var(--heading-color);
     font-size: max(7vw,5vh);
@@ -30,8 +34,6 @@
     margin: 12vw;
     display: flex;
     flex-wrap: wrap;
-
-
 }
   
   .card {
@@ -55,6 +57,12 @@
   @media (max-width: 980px) {
     .card {
       flex: 1 1 100%; /* When screen size is smaller, divs take full width */
+    }
+    .flex-container{
+        margin: 6vw;
+    }
+    .card p{
+        font-size: 15px;
     }
   }
   
