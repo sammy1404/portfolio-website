@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+#projects h1 {
+    color: var(--heading-color);
+    font-size: max(7vw,5vh);
+    position: relative; /* Establish a positioning context */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text horizontally */
+    text-align: center; /* Align the text centrally */
+}
+
+#projects h1::before, #projects h1::after {
+    content: ''; /* Required for pseudo-elements */
+    display: block; /* Block-level element */
+    width: 15vw; /* Set the width of the line */
+    height: 1px; /* Set the thickness of the line */
+    background: var(--heading-color); /* Set the color of the line */
+}
+
+#projects h1::before {
+    margin-right: 3vw; /* Space between line and heading on the left */
+}
+
+#projects h1::after {
+    margin-left: 3vw; /* Space between line and heading on the right */
+}
+
+.flex-container{
+    margin: 12vw;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+  
+  .card {
+    flex: 1 1 45%; /* Flex-grow, flex-shrink, flex-basis to take 50% width */
+    box-sizing: border-box; /* Ensure padding and borders don't affect size */
+    padding: 10px; /* Optional padding */
+    background-color: var(--nav-color);
+    margin: 10px;
+    border-radius: 10px;
+
+    padding-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  @media (max-width: 980px) {
+    .card {
+      flex: 1 1 100%; /* When screen size is smaller, divs take full width */
+    }
+  }
+  
+
+
+  .card img {
+    position: relative; /* Make the image absolutely positioned */
+    width: 100%;
+    object-fit: cover; /* Ensure the image scales properly */
+    border-radius: 10px; /* Maintain rounded corners */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Mask from top transparent to bottom white */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* For Safari */
+    transition: transform 0.3s ease, mask-image 0.3s ease; 
+}
+
+   .card img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .card h3, .card p, .card .quickLinks {
+    position: relative; /* Keep the content relative to the card */
+    z-index: 2; /* Ensure the content is on top of the image */
+    color: var(--text-color); /* Adjust the color for visibility over the image */
+  }
+
+
+  .card h3{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transform: translateY(-30px);
+  }
+
+  .card h6{
+    color: var(--text-color);
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .card .quickLinks{
+    display: flex;
+    width: fit-content;
+    
+    margin: 10px;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+
+.card svg{
+    fill: rgba(255, 255, 255, 0.164); /* Ensure you're targeting the correct SVG parts */
+    transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out; /* Transition fill and transform smoothly */
+}
+.card svg:hover {
+    transform: translateY(-5px); /* Moves up on hover */
+    cursor: pointer;
+    fill: var(--text-color); /* Ensure this targets the right SVG paths */
+}
