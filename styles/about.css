@@ -141,6 +141,7 @@ h1::after {
     width: fit-content;
     overflow-x:auto; /* Hides content that overflows */
     direction: rtl; /* Reverse the scroll direction */
+    height: 40px;
 }
 
 .skills2{
@@ -149,15 +150,10 @@ h1::after {
     margin-top: 30px;
     margin-right: 10vw;
     height: 40px;
-    overflow-x: scroll;
     overflow-y: hidden;
 }
 
 #about h6{
     font-size: 15px;
-}
-
-#projects{
-    height: 100vh;
 }
 
