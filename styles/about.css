@@ -23,7 +23,7 @@
 
 
 
-h1::after {
+#about h1::after {
     content: ''; /* Required for pseudo-elements */
     display: inline-block; /* Make the line inline */
     width: 35vw; /* Set the width of the line */

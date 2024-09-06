@@ -1,0 +1,118 @@
+@import url("style.css");
+
+
+#contact{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+#contact{
+    margin-right: 15vw;
+    margin-left: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+
+
+#contact h1{
+    color: var(--heading-color);
+    font-size: max(7vw,5vh);
+    position: relative; /* Establish a positioning context */
+    display: inline-block;
+}
+
+
+
+#contact h1::before {
+    content: ''; /* Required for pseudo-elements */
+    display: inline-block; /* Make the line inline */
+    width: 35vw; /* Set the width of the line */
+    height: 1px; /* Set the thickness of the line */
+    background: var(--heading-color); /* Set the color of the line */
+    margin-right: 3vw; /* Space between heading and line */
+    vertical-align: middle; /* Vertically center the line */
+    position: relative; /* Position relative to the heading */
+    top: 0; /* Adjust this value to align with the 't' */
+}
+
+
+#contact h2{
+    color: var(--text-color);
+}
+
+.contactContainer{
+    background-color: red;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials{
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.socials::after {
+    content: ''; /* Required for pseudo-elements */
+    display: inline-block; /* Make the line inline */
+    width: 2px; /* Set the thickness of the line */
+    height: 25vh; /* Set the height of the line */
+    background: var(--heading-color); /* Set the color of the line */
+    vertical-align: middle; /* Vertically center the line */
+    position: relative; /* Position relative to the heading */
+    left: 0; /* Adjust this value to align horizontally */
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+
+
+.socials svg{
+    stroke: rgba(255, 255, 255, 0);
+    fill: rgba(255, 255, 255, 0.315);
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+}
+
+.socials svg:hover{
+    transform: translateY(-5px);
+    fill: var(--text-color);
+    stroke: transparent;
+    cursor: pointer;
+}
+
+
+#contact .discord{
+    stroke: rgba(255, 255, 255, 0.315);
+    stroke-width: 1.5px;
+}
+
+.socials .li{
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+.socials .mail{
+    stroke: rgba(255, 255, 255, 0.315);
+}
+.socials .mail:hover{
+    stroke: var(--text-color);
+}
+
+
+
