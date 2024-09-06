@@ -4,6 +4,11 @@
     height: fit-content;
     margin: 12vw;
 }
+@media(max-width:980px){
+    #projects{
+        margin: 3vw;
+    }
+}
 
 #projects h1 {
     color: var(--heading-color);
@@ -47,6 +52,7 @@
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
   }
+
 
   .card:hover{
     transform: scale(1.02);
