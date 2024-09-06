@@ -34,6 +34,7 @@
 .flex-container{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
   
   .card {
@@ -78,7 +79,7 @@
 }
 
    .card img:hover{
-    transform: scale(1.01);
+    transform: scale(1.1);
     cursor: pointer;
   }
 
@@ -97,7 +98,7 @@
     transform: translateY(-30px);
   }
 
-  .card, .card-publications h6{
+  .card h6, .card-publications h6{
     color: var(--text-color);
     margin-top: 10px;
     font-size: 20px;
@@ -110,6 +111,10 @@
     margin-top: 30px;
     gap: 20px;
 }
+.card, .card-publications p{
+    font-size: 15px;
+}
+
 
 
 .card svg{
@@ -147,30 +152,34 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: red;
     padding: 20px;
 }
-.publications h3{
+.publications h2{
     color: var(--text-color);
-
     display: flex;
     justify-content: center;
     justify-self: center;
+
 }
-.publications h3::before, .publications h3::after {
+.publications h2::before, .publications h2::after {
     content: ''; /* Required for pseudo-elements */
     display: block; /* Block-level element */
     width: 40vw; /* Set the width of the line */
-    height: 1px; /* Set the thickness of the line */
+    height: 3px; /* Set the thickness of the line */
     background: var(--heading-color); /* Set the color of the line */
+    transform: translateY(15px);
 }
-.publications h3::before {
+.publications h2::before {
     margin-right: 1vw; /* Space between line and heading on the left */
 }
 
-.publications h3::after {
+.publications h2::after {
     margin-left: 1vw; /* Space between line and heading on the right */
 }
+
+
+
+
 
 
 
@@ -197,6 +206,11 @@
     color: var(--text-color); /* Adjust the color for visibility over the image */
   }
 
+  .card-publications h3{
+    transform: translateY(-40px);
+    margin-inline: 5px;
+  }
+
 .card-publications {
     flex: 1 1 25%; /* Flex-grow, flex-shrink, flex-basis to take 50% width */
     box-sizing: border-box; /* Ensure padding and borders don't affect size */
@@ -217,19 +231,16 @@
         margin: 6vw;
         gap: 15px;
     }
-    .card p{
-        font-size: 15px;
-    }
   }
   
   .card-publications:hover{
-    transform: scale(1.1);
+    transform: scale(1.02);
     cursor: pointer;
   }
 
 
   .card-publications img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     cursor: pointer;
   }
   
@@ -242,4 +253,34 @@
     transform: translateY(-5px); /* Moves up on hover */
     cursor: pointer;
     fill: var(--text-color); /* Ensure this targets the right SVG paths */
+}
+
+
+.card-publications p{
+    font-size: 13px;
+    transform: translateY(-20px);
+}
+
+.card-publications h6{
+    font-size: 15px;
+    transform: translateY(-20px);
+}
+
+.card-publications h3{
+    font-size: 15px;
+    
+}
+
+.card-publications svg{
+    stroke: rgba(255, 255, 255, 0.362);
+    fill: #ffffff00;
+}
+
+.card-publications svg:hover{
+    stroke: var(--text-color);
+    fill: #ffffff00;
+}
+
+.card-publications .DOI{
+    font-size: 12px;
 }
