@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 #contact{
@@ -102,7 +103,7 @@
     .socials.onScroll {
         position: fixed;
         bottom: 0;
-        transform:  scale(1.5) rotate(-90deg); /* Rotate 90 degrees */
+        transform:  scale(1.3) rotate(-90deg); /* Rotate 90 degrees */
         left: 48%;                /* Center horizontally */
         transform-origin: center; /* Ensure rotation happens around the center */
         direction: rtl;
@@ -141,7 +142,18 @@
     #svg6.onScroll{
         transform: rotate(90deg); /* Rotate 90 degrees */
     }
-    
+
+    #svg1.onScroll:hover,
+    #svg2.onScroll:hover,
+    #svg3.onScroll:hover,
+    #svg4.onScroll:hover,
+    #svg5.onScroll:hover,
+    #svg6.onScroll:hover {
+        /* Hover animation properties */
+        transition: transform 0.3s ease; /* Example transition */;
+        transform: translateX(2px) rotate(90deg);/* Example hover effect */
+    }
+        
     
     
     .socials.onScroll::after {
@@ -302,3 +314,23 @@ form input{
     }
     
 }
+
+
+@media(max-width:450px){
+    #contact h1{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    form button{
+        width: 50%;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+
+    form input{
+        margin-left: 10px;
+    }
+}
+
