@@ -451,10 +451,31 @@
 
     <section id="contact">
         <h1>Contact</h1>
-
+        
         
         <div class="contactContainer">
             <h2>Get In Touch</h2>
+            <form id="contactForm" action="https://formsubmit.co/samreeves1404@gmail.com" method="POST">
+                <div class="form-row">
+                    
+                    <div class="form-flex">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name" required>
+                    </div>
+
+                    <div class="form-flex">
+                        <label for="name">Phone Number:</label>
+                        <input type="number" id="phone" name="phone_no" required>
+                    </div>
+                   
+                </div>
+                <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+            
+                <button type="submit">Send Message</button>
+            </form>
+            
+        </div>
             <div class="center">
                 <div class="socials">
                     <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" width="30px" height="30px" viewBox="1.5 3 40 40" id="svg1">
@@ -485,7 +506,6 @@
                     
                 </div>
             </div>
-        </div>
     </section>
 
 
@@ -554,6 +574,9 @@
         </div>
     </div>
     
+    <footer>
+        <p></p>
+    </footer>
 
     <script src="themes.js"></script>
     <script src="home.js"></script>

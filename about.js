@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Options for the observer (how much of the element must be visible to trigger the callback)
     const options = {
         root: null, // Use the viewport as the root
-        threshold: 0.9 // Trigger when 50% of the element is visible
+        threshold: 0.99 // Trigger when 50% of the element is visible
     };
 
     // Create an Intersection Observer

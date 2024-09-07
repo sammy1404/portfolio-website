@@ -2,9 +2,11 @@
 
 
 #contact{
+    margin: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #contact{
@@ -41,21 +43,32 @@
 
 
 #contact h2{
+    margin-top: 10px;
     color: var(--text-color);
+    background-color: var(--background-color);
+    transform: translateY(-40px);
+    padding-inline: 20px;
 }
 
-.contactContainer{
-    height: 100%;
+.contactContainer {
+    margin-top: 10px;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: top;
+    justify-content: flex-start; /* Change 'top' to 'flex-start' for proper alignment */
     align-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.347); /* Add border with width, style, and color */
+    border-radius: 10px;
 }
+
 
 
 @media (min-width:980px){
     .socials{
         position: fixed;
+        transform: translateY(30px);
         bottom: 0;
         right: 30px;
         display: flex;
@@ -75,7 +88,7 @@
         vertical-align: middle; /* Vertically center the line */
         position: relative; /* Position relative to the heading */
         left: 0; /* Adjust this value to align horizontally */
-        margin-bottom: 15px;
+        margin-bottom: 55px;
         margin-top: 20px;
         transition: transform 0.3s ease-in-out;
     }
@@ -87,8 +100,9 @@
     
     
     .socials.onScroll {
-        bottom: 0px;
-        transform:  scale(2) rotate(-90deg); /* Rotate 90 degrees */
+        position: fixed;
+        bottom: 0;
+        transform:  scale(1.5) rotate(-90deg); /* Rotate 90 degrees */
         left: 48%;                /* Center horizontally */
         transform-origin: center; /* Ensure rotation happens around the center */
         direction: rtl;
@@ -108,7 +122,6 @@
     #svg1.onScroll{
         transform: rotate(90deg); /* Rotate 90 degrees */
     }
-    
     #svg2.onScroll{
         transform: rotate(90deg); /* Rotate 90 degrees */
     }
@@ -189,4 +202,103 @@
 }
 .socials .mail:hover{
     stroke: var(--text-color);
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.098);
+    transform: translateY(-25px);
+}
+
+form label{
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+form input{
+    background-color: rgba(255, 255, 255, 0.23);
+    border-radius: 10px;
+    border: none;
+    color: var(--text-color);
+    padding: 7px;
+    padding-inline: 10px;
+}
+
+.form-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-flex{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px
+}
+
+form textarea{
+    background-color: rgba(255, 255, 255, 0.134);
+    border-radius: 10px;
+    color: var(--text-color);
+    border: none;
+    margin-bottom: 20px;
+    resize: none;
+    padding: 10px;
+    height: 140px;
+    margin-top: 10px;
+}
+
+form button{
+    background-color: rgba(255, 255, 255, 0.157);
+    color: var(--text-color);
+    align-self: center;
+    padding: 10px;
+    width: 30%;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+form button:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.201);;
+    transform: translateY(-5px);
+}
+
+@media (min-width:980px) {
+    #name{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    
+    #phone{
+        margin-left: 20px;
+    }
+}
+
+
+form input{
+    width: auto;
+}
+
+@media(max-width:980px){
+    .form-flex{
+        display: flex;
+        flex: 1 1 50%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        
+    }
+
+    form label{
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+    
 }
