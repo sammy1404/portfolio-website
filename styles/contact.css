@@ -5,7 +5,6 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
 }
 
 #contact{
@@ -46,49 +45,129 @@
 }
 
 .contactContainer{
-    background-color: red;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
 }
 
-.socials{
-    position: fixed;
-    bottom: 0;
-    right: 30px;
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease, bottom 1s ease; /* Smooth transitions */
+
+@media (min-width:980px){
+    .socials{
+        position: fixed;
+        bottom: 0;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s ease, bottom 1s ease; /* Smooth transitions */
+    }
+    
+    .socials::after {
+        content: ''; /* Required for pseudo-elements */
+        display: inline-block; /* Make the line inline */
+        width: 2px; /* Set the thickness of the line */
+        height: 25vh; /* Set the height of the line */
+        background: var(--heading-color); /* Set the color of the line */
+        vertical-align: middle; /* Vertically center the line */
+        position: relative; /* Position relative to the heading */
+        left: 0; /* Adjust this value to align horizontally */
+        margin-bottom: 15px;
+        margin-top: 20px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    
+
+ 
+    
+    
+    
+    .socials.onScroll {
+        bottom: 0px;
+        transform:  scale(2) rotate(-90deg); /* Rotate 90 degrees */
+        left: 48%;                /* Center horizontally */
+        transform-origin: center; /* Ensure rotation happens around the center */
+        direction: rtl;
+    }
+    
+    
+    .center{
+        justify-content: center;
+        justify-self: center;
+    }
+    
+    #svg1, #svg2, #svg3, #svg4, #svg5, #svg6{
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    
+    #svg1.onScroll{
+        transform: rotate(90deg); /* Rotate 90 degrees */
+    }
+    
+    #svg2.onScroll{
+        transform: rotate(90deg); /* Rotate 90 degrees */
+    }
+    
+    #svg3.onScroll{
+        transform: rotate(90deg); /* Rotate 90 degrees */
+    }
+    
+    #svg4.onScroll{
+        transform: rotate(90deg); /* Rotate 90 degrees */
+    }
+    
+    #svg5.onScroll{
+        transform: rotate(90deg); /* Rotate 90 degrees */
+    }
+    
+    #svg6.onScroll{
+        transform: rotate(90deg); /* Rotate 90 degrees */
+    }
+    
+    
+    
+    .socials.onScroll::after {
+        display: none;
+    }
+    
+    
 }
 
-.socials::after {
-    content: ''; /* Required for pseudo-elements */
-    display: inline-block; /* Make the line inline */
-    width: 2px; /* Set the thickness of the line */
-    height: 25vh; /* Set the height of the line */
-    background: var(--heading-color); /* Set the color of the line */
-    vertical-align: middle; /* Vertically center the line */
-    position: relative; /* Position relative to the heading */
-    left: 0; /* Adjust this value to align horizontally */
-    margin-bottom: 15px;
-    margin-top: 20px;
-    transition: transform 0.3s ease-in-out;
+
+@media (max-width: 980px){
+    .socials{
+        justify-self: center;
+        position: fixed;
+        transform: translateY(100px);
+        bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        transition: transform 0.5s ease-in;
+    }
+    
+    .socials.onScroll{
+        transform: translateY(0);
+    }
+
+    .socials::after{
+        display: none;
+    }
 }
 
-
-
+    
 .socials svg{
     stroke: rgba(255, 255, 255, 0);
     fill: rgba(255, 255, 255, 0.315);
     transition: all 0.3s ease-in-out;
     margin: 10px;
 }
-
+   
 .socials svg:hover{
     transform: translateY(-5px);
     fill: var(--text-color);
@@ -110,82 +189,4 @@
 }
 .socials .mail:hover{
     stroke: var(--text-color);
-}
-
-
-
-
-.socials.onScroll {
-    bottom: 0px;
-    transform:  scale(3) rotate(-90deg); /* Rotate 90 degrees */
-    left: 48%;                /* Center horizontally */
-    transform-origin: center; /* Ensure rotation happens around the center */
-    direction: rtl;
-    background-color: orange;
-}
-
-
-.center{
-    justify-content: center;
-    justify-self: center;
-}
-
-#svg1, #svg2, #svg3, #svg4, #svg5, #svg6{
-    transition: transform 0.5s ease-in-out;
-}
-
-
-#svg1.onScroll{
-    transform: rotate(90deg); /* Rotate 90 degrees */
-}
-
-#svg2.onScroll{
-    transform: rotate(90deg); /* Rotate 90 degrees */
-}
-
-#svg3.onScroll{
-    transform: rotate(90deg); /* Rotate 90 degrees */
-}
-
-#svg4.onScroll{
-    transform: rotate(90deg); /* Rotate 90 degrees */
-}
-
-#svg5.onScroll{
-    transform: rotate(90deg); /* Rotate 90 degrees */
-}
-
-#svg6.onScroll{
-    transform: rotate(90deg); /* Rotate 90 degrees */
-}
-
-
-
-.socials.onScroll::after {
-    display: none;
-}
-
-
-
-@media (max-width: 980px){
-    .socials{
-        margin-left: 30px;
-        justify-self: center;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        justify-content: space-around;
-    }
-    
-    .socials svg{
-        margin-inline: 20px;
-
-
-    }
-
-    .socials::after{
-        display: none;
-    }
 }
