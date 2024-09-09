@@ -7,7 +7,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 #contact{
@@ -102,7 +101,7 @@
     
     .socials.onScroll {
         position: fixed;
-        bottom: 0;
+        bottom: -100px;
         transform:  scale(1.3) rotate(-90deg); /* Rotate 90 degrees */
         left: 48%;                /* Center horizontally */
         transform-origin: center; /* Ensure rotation happens around the center */
@@ -216,6 +215,14 @@
     stroke: var(--text-color);
 }
 
+
+.footer{
+    display: flex;
+    width: 100vw;
+    color: var(--text-color);
+    justify-content: center;
+    bottom: 0;
+}
 
 form{
     display: flex;
