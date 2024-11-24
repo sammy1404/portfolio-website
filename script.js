@@ -38,3 +38,15 @@ document.querySelectorAll('.toggle-color-pickers').forEach(button => {
         colorPickers.classList.toggle('visible');
     });
 });
+
+
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav'); // Adjust selector as needed
+    const navHeight = nav.offsetHeight;
+
+    if (window.scrollY > navHeight) {
+        nav.classList.add('nav-on-scroll');
+    } else {
+        nav.classList.remove('nav-on-scroll');
+    }
+});

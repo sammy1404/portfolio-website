@@ -50,13 +50,19 @@ nav{
     position: fixed;
     width: 100%;
     padding: 0.5rem;
-    background-color:var(--nav-color);/* Slightly lighter dark blue */
+    background-color:var(--background-color);/* Slightly lighter dark blue */
+    transform: translateY(12px);
     display: flex;
     justify-content: flex-end;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* optional */
     transition: transform 0.3s ease; /* smooth transition for hiding/showing */
     z-index: 5;
+}
+
+.nav-on-scroll{
+    transform: translateY(0);
+    background-color: var(--nav-color);
 }
 
 #svg1L {
@@ -223,11 +229,15 @@ a{
         right: -75%;
         height: 110vh;
         width: 75%;
-        transition: right .5s;
+        transition: right .5s, filter 0.3s ease;
     }
     
     .menu.active{
         right: 0;
+    }
+
+    .menu.active section{
+        filter: blur(12px);
     }
     
     
@@ -261,10 +271,9 @@ a{
     }
     
     button svg{
-        stroke: var(--text-color);
+        stroke: none;
         width: 50px;
         height: 50px;
-        stroke-width: 0.05;
     }
 
 
@@ -287,9 +296,8 @@ a{
 }
 
 button svg{
-    stroke: var(--text-color);
+    stroke: none;
     fill: var(--text-color);
-    stroke-width: 0.05px;
 }
 
 .color-pickers {
