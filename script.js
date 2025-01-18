@@ -93,3 +93,11 @@ const projectObserver = new IntersectionObserver((entries) => {
 projects.forEach(project => {
     projectObserver.observe(project);
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const socials = document.querySelector(".socials");
+    if (socials) {
+        socials.classList.add("loaded");
+    }
+});

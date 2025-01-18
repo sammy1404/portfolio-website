@@ -551,3 +551,25 @@ button svg{
     animation: slideIn 1s forwards;
     transform: translateY(0);
 }
+
+.socials svg {
+    transform: translateY(300px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+}
+
+.socials::after {
+    transform: translateY(300px);
+    opacity: 0.2;
+    transition: transform 1s ease, opacity 1s ease; /* Smooth transition */
+}
+
+.socials.loaded svg {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.socials.loaded::after {
+    transform: translateY(0);
+    opacity: 1;
+}
