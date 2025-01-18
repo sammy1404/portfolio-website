@@ -518,3 +518,36 @@ button svg{
 .toggle-color-pickers{
     transform: translateY(-3px);
 }
+
+
+
+.animate-in{
+    opacity: 0;
+}
+
+
+
+.slide-in {
+    animation: slideIn 1s forwards;
+    transform: translateY(0);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(250px); /* Start from below */
+        opacity: 0; /* Initial opacity */
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+        opacity: 1; /* Final opacity */
+    }
+}
+
+.animate-projects{
+    opacity: 0;
+}
+
+.slide-projects-in{
+    animation: slideIn 1s forwards;
+    transform: translateY(0);
+}

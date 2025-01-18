@@ -50,3 +50,46 @@ window.addEventListener('scroll', () => {
         nav.classList.remove('nav-on-scroll');
     }
 });
+
+
+const sections = document.querySelectorAll('.animate-in');
+const options = {
+    root: null, // Use the viewport as the root
+    threshold: 0.5 // Trigger when 10% of the section is visible
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove('animate-in');
+            entry.target.classList.add('slide-in');
+            observer.unobserve(entry.target); // Stop observing once the class is changed
+        }
+    });
+}, options);
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+
+// Select all elements with the class 'animate-projects'
+const projects = document.querySelectorAll('.animate-projects');
+
+// Create an Intersection Observer
+const projectObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Remove 'animate-projects' class and add 'slide-projects-in' class
+            entry.target.classList.remove('animate-projects');
+            entry.target.classList.add('slide-projects-in');
+            // Unobserve the element after it has been processed
+            projectObserver.unobserve(entry.target);
+        }
+    });
+},options);
+
+// Observe each project element
+projects.forEach(project => {
+    projectObserver.observe(project);
+});
