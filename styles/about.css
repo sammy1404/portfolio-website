@@ -53,12 +53,12 @@
     font-size: px;
 }
 
-#about img{
+#about .dp{
     height: 300px;
     transition: all 0.5s ease-in-out;
 }
 
-#about img:hover{
+#about .dp:hover{
     transform: translate(-10px, -10px);
     box-shadow: 15px 15px 15px var(--heading-color); /* Subtle shadow in normal state */
 }
@@ -78,7 +78,7 @@
 
 #about h2{
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 20px;
     color: white;
 }
 
@@ -153,7 +153,14 @@
     overflow-y: hidden;
 }
 
-#about h6{
-    font-size: 15px;
+#about .skill1 img {
+    height: 27px;
+    border-radius: 3px;
 }
 
+
+
+#about .skill img {
+    height: 27px;
+    border-radius: 3px;
+}

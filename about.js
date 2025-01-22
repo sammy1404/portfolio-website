@@ -45,3 +45,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start observing the contact section
     observer.observe(contactSection);
 });
+
+function autoScroll(containerSelector, scrollStep, delay) {
+    const container = document.querySelector(containerSelector);
+
+    let scrollAmount = 0;
+    const maxScroll = container.scrollWidth - container.clientWidth;
+
+    function scrollContent() {
+        scrollAmount += scrollStep;
+        if (scrollAmount >= maxScroll || scrollAmount <= 0) {
+            scrollStep = -scrollStep; // Reverse direction
+        }
+        container.scrollLeft = scrollAmount;
+    }
+
+    setInterval(scrollContent, delay);
+}
+
+// Initialize auto-scrolling for both sections
+autoScroll(".skills", 2, 20); // Scrolls the `.skills` container
+autoScroll(".skills2", 2, 20); // Scrolls the `.skills2` container
