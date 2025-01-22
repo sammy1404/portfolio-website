@@ -51,11 +51,10 @@ nav{
     width: 100%;
     padding: 0.5rem;
     background-color:var(--background-color);/* Slightly lighter dark blue */
-    transform: translateY(12px);
+    transform: translateY(15px);
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* optional */
     transition: transform 0.3s ease; /* smooth transition for hiding/showing */
     z-index: 5;
 }
