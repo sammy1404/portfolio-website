@@ -73,31 +73,36 @@ sections.forEach(section => {
 });
 
 
-// Select all elements with the class 'animate-projects'
-const projects = document.querySelectorAll('.animate-projects');
-
-// Create an Intersection Observer
-const projectObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // Remove 'animate-projects' class and add 'slide-projects-in' class
-            entry.target.classList.remove('animate-projects');
-            entry.target.classList.add('slide-projects-in');
-            // Unobserve the element after it has been processed
-            projectObserver.unobserve(entry.target);
-        }
-    });
-},options);
-
-// Observe each project element
-projects.forEach(project => {
-    projectObserver.observe(project);
-});
-
-
 document.addEventListener("DOMContentLoaded", () => {
+    // Animate socials
     const socials = document.querySelector(".socials");
     if (socials) {
         socials.classList.add("loaded");
     }
+
+    // Set observer options
+    const options = {
+        root: null, // uses viewport
+        rootMargin: "0px 0px -20% 0px", // triggers earlier in the viewport
+        threshold: 0.1 // 10% of the element is visible
+    };
+
+    // Select all elements with the class 'animate-projects'
+    const projects = document.querySelectorAll('.animate-projects');
+
+    // Create Intersection Observer
+    const projectObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('animate-projects');
+                entry.target.classList.add('slide-projects-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    // Observe each project
+    projects.forEach(project => {
+        projectObserver.observe(project);
+    });
 });
